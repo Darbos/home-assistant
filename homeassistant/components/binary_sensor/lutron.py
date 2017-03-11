@@ -43,12 +43,13 @@ class LutronPicoButton(LutronDevice, BinarySensorDevice):
         LutronDevice.__init__(self, hass, DOMAIN, area_name, lutron_device,
                               controller)
 
-#    @property
-#    def device_state_attributes(self):
-#        """Return the state attributes."""
-#        attr = {}
-#        attr['Lutron Integration ID'] = self._lutron_device.id
-#        return attr
+    # @property
+    # def device_state_attributes(self):
+    #     """Return the state attributes."""
+    #     attr = {}
+    #     attr['Lutron Integration ID'] = self._lutron_device.id
+    #     attr['Lutron ID & Button Number'] = str(self._lutron_device.id) + str(self._lutron_device.number)
+    #     return attr
 
     @property
     def is_on(self):

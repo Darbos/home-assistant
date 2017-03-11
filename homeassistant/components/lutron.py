@@ -57,7 +57,6 @@ def setup(hass, base_config):
         for keypad in area.keypads:
             for button in keypad.buttons:
                 hass.data[LUTRON_DEVICES]['binary_sensor'].append((area.name, button))
-
     for component in ('light', 'binary_sensor',):
         discovery.load_platform(hass, component, DOMAIN, None, base_config)
     return True
